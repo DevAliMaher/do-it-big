@@ -1,0 +1,16 @@
+{
+  "name": "@doitbig/styles",
+  "version": "0.0.1",
+  "exports": {
+    "./scss": "./src/lib/scss/_styles.scss",
+    "./tailwindConfig": "./src/lib/tailwind.config.js"
+  },
+  "peerDependencies": {
+    "@angular/common": "^17.0.0",
+    "@angular/core": "^17.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

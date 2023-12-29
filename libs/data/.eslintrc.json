@@ -21,18 +21,23 @@
           "error",
           {
             "type": "element",
-            "prefix": "ng-bot",
+            "prefix": "do-it-big",
             "style": "kebab-case"
           }
-        ],
-        "@angular-eslint/no-host-metadata-property": "off",
-        "@angular-eslint/no-input-rename": "off"
+        ]
       }
     },
     {
       "files": ["*.html"],
       "extends": ["plugin:@nx/angular-template"],
       "rules": {}
+    },
+    {
+      "files": ["*.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "@nx/dependency-checks": "error"
+      }
     }
   ]
 }

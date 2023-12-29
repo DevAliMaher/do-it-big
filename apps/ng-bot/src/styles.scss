@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@use '../../../libs/styles/src/lib/scss/styles';
+
+html,
+body {
+  @apply h-full font-body;
+}
+
+body {
+  @apply relative min-h-screen text-[15px] text-gray-100 bg-red-100 bg-no-repeat bg-cover;
+}
+
+form {
+  @apply overflow-auto;
+}
+
+form label {
+  @apply block text-center text-[1.2em];
+}
+
+input {
+  @apply inline-block p-[0.2em_1em] m-[15px_0] rounded-[3px] border-0 leading-[2em] text-[1em];
+
+  &[type='text'] {
+    @apply border border-solid min-w-[80%] transition-[all_ease-in_0.25s];
+  }
+
+  &:focus {
+    @apply outline-0 border border-solid border-blue-100;
+  }
+
+  &::placeholder {
+    @apply text-black-faint;
+  }
+}

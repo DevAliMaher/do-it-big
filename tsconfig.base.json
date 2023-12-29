@@ -13,8 +13,17 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@doitbig/assets": ["libs/assets/src/index.ts"],
+      "@doitbig/components": ["libs/components/src/index.ts"],
+      "@doitbig/data": ["libs/data/src/index.ts"],
+      "@doitbig/data/models": ["libs/data/models/src/index.ts"],
+      "@doitbig/data/static": ["libs/data/static/src/index.ts"],
+      "@doitbig/styles": ["libs/styles/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

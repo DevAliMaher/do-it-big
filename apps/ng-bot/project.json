@@ -16,7 +16,15 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/ng-bot/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/ng-bot/src/favicon.ico", "apps/ng-bot/src/assets"],
+        "assets": [
+          "apps/ng-bot/src/favicon.ico",
+          "apps/ng-bot/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/assets/src/lib",
+            "output": "assets"
+          }
+        ],
         "styles": ["apps/ng-bot/src/styles.scss"],
         "scripts": []
       },

@@ -1,0 +1,37 @@
+{
+  "name": "assets",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/assets/src",
+  "prefix": "do-it-big",
+  "tags": ["assets"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/assets/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/assets/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/assets/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/assets/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  }
+}
