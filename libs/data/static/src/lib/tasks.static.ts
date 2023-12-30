@@ -1,4 +1,10 @@
-import { TaskModel } from '@doitbig/data/models';
+import { TaskInputModel, TaskModel } from '@doitbig/data/models';
+
+export const TaskInputs: TaskInputModel[] = [
+  { title: 'New task 1' },
+  { title: 'New task 2' },
+  { title: 'New task 3' },
+];
 
 export const Tasks: TaskModel[] = [
   {

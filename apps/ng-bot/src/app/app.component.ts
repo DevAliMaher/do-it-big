@@ -1,21 +1,24 @@
+import { TaskInputs, Tasks } from '@doitbig/data/static';
+
+import { BotSteps } from '@doitbig/features/bot-steps';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TaskModel } from '@doitbig/data/models';
-import { Tasks } from '@doitbig/data/static';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, BotSteps],
   selector: 'ng-bot-root',
   templateUrl: './app.component.html',
   host: {
-    class: 'block h-full'
-  }
+    class: 'block h-full',
+  },
 })
 export class AppComponent {
   title = 'ng-bot';
 
+  tasksInputs = TaskInputs;
   tasks = Tasks;
 
   completedTasks: TaskModel[] = [
@@ -37,7 +40,6 @@ export class AppComponent {
     },
   ];
 
-  
   addTask(description: string) {
     this.tasks.push({
       title: description,

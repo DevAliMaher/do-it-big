@@ -118,6 +118,12 @@ module.exports = plugin.withOptions(function () {
             },
           },
         },
+        '&-smart': {
+          border: '1px solid green',
+        },
+        '&-selected': {
+          border: '1px solid blue',
+        },
       },
       '.status': {
         '.free': {

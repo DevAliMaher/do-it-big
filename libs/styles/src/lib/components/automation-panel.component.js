@@ -12,7 +12,7 @@ module.exports = plugin.withOptions(function () {
         '.automation-content': {
           background: 'white',
           margin: '0 auto',
-          height: '200px',
+          minHeight: '150px',
           borderRadius: '5px',
           width: '90%',
         },

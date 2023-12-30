@@ -19,9 +19,14 @@
     "paths": {
       "@doitbig/assets": ["libs/assets/src/index.ts"],
       "@doitbig/components": ["libs/components/src/index.ts"],
+      "@doitbig/components/action-card": [
+        "libs/components/action-card/src/index.ts"
+      ],
       "@doitbig/data": ["libs/data/src/index.ts"],
       "@doitbig/data/models": ["libs/data/models/src/index.ts"],
       "@doitbig/data/static": ["libs/data/static/src/index.ts"],
+      "@doitbig/features": ["libs/features/src/index.ts"],
+      "@doitbig/features/bot-steps": ["libs/features/bot-steps/src/index.ts"],
       "@doitbig/styles": ["libs/styles/src/index.ts"]
     }
   },

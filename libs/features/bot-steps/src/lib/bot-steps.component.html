@@ -1,0 +1,51 @@
+<div
+  class="flex flex-col items-stretch gap-3 p-4 select-none automation-content"
+>
+  <!-- header -->
+  <div class="flex items-center gap-2">
+    <!-- title -->
+    <h3 class="text-lg font-bold m-in-e-auto">
+      {{ stepsData[_currentStep - 1].stepTitle }}
+    </h3>
+    <!-- info -->
+    <button type="button" class="w-8 h-8">
+      <img src="assets/svgs/info.svg" alt="info" />
+    </button>
+    <!-- close -->
+    <button type="button" class="w-8 h-8">
+      <img src="assets/svgs/close.svg" alt="close" />
+    </button>
+  </div>
+
+  <!-- steps wrapper -->
+  <div class="flex flex-wrap items-center flex-1 gap-3">
+    <ng-container *ngFor="let step of stepsData">
+      <ng-container *ngIf="_currentStep === step.stepNo">
+        <!-- current step -->
+        <p class="text-lg max-w-[55ch]">{{ step.stepSubtitle }}</p>
+        <div
+          *ngIf="step.stepChildActions?.length"
+          class="flex flex-wrap w-full gap-3"
+        >
+          <do-it-big-action-card
+            *ngFor="let cardData of step.stepChildActions"
+            [cardData]="cardData"
+            (cardClicked)="cardClicked($event)"
+          ></do-it-big-action-card>
+        </div>
+        <!-- actions -->
+        <div class="inline-flex items-center self-end gap-4 m-in-s-auto">
+          <button
+            *ngFor="let action of step.stepActions"
+            type="button"
+            class="btn"
+            [class]="action.theme"
+            (click)="action.action(this)"
+          >
+            {{ action.actionLabel }}
+          </button>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

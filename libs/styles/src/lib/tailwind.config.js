@@ -36,6 +36,9 @@ module.exports = {
       body: ['"Open Sans"', 'sans-serif', 'system-ui'],
     },
     extend: {
+      spacing :{
+        auto: 'auto',
+      },
       backgroundImage: {
         'linear-red': 'linear-gradient(#fc6c48 0%,#ef5081 100%)',
         trash:
